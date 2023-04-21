@@ -5,7 +5,7 @@ const susbcriberSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    subscribedChannel:{
+    subscribedChannel: {
         type: String,
         required: true,
     },
@@ -14,6 +14,6 @@ const susbcriberSchema = new mongoose.Schema({
         required: true,
         default: Date.now
     }
-})
+}, { versionKey: false })
 
-module.exports = mongoose.model('Subscriber',susbcriberSchema);
+module.exports = mongoose.model('Subscriber', susbcriberSchema);
